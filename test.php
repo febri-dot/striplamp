@@ -35,12 +35,11 @@ $state = $btn == "ON" ? "OFF" : "ON";
             <span></span>
         </div>
         <form method="get" id="form">
-            <button>
+            <a class="btn" href="data.php" role="button" id="btn-data">
                 <p class="awesome"><i class="fa fa-clock"></i></p>
-                <br>
-                <a href="data.php">Time usage</a>
-            </button>
-            <?php echo '<input type="submit" name="tombol" id="btn" value="'.$state.'"/>'; ?>
+                <p class="label-btn">Time Usage</p>
+            </a>
+            <?php echo '<input type="submit" name="tombol" class="btn" id="btn-state" value="'.$state.'"/>'; ?>
         </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -99,7 +98,7 @@ $query = "INSERT INTO  datalamp (kondisi, hari, waktu, tanggal) VALUES ('$btn', 
 
 if(isset($btn)) {
     $result = mysqli_query($conn, $query);
-    echo "$btn";
+    // echo "$btn";
 }
 ?>
 
@@ -159,71 +158,89 @@ if(isset($btn)) {
 
         color: #B6724D;
     }
-    /* .jam {
-    border: 2px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 735px;
-    height: 150px;
-    margin-left: 352px;
-    margin-top: 157px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-.jam{
-    margin-left: 675px;
-    margin-top: 157px;
-    border: 2px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 735px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .jam{
+        margin-left: 675px;
+        margin-top: 157px;
+        border: 2px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 735px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.jam div {
-    position: relative;
-    background-color: #E0A470;
-    height: 100%;
-    width: 150%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 60px;
-    color: #FFFFFF;
-    border-radius: 5px;
-    letter-spacing: 3px;
-}
-
-.jam span {
-    font-weight: bolder;
-    font-size: 60px;
-    color: #FFFFFF;
-}
-    button{
+    .jam div {
+        position: relative;
+        background-color: #E0A470;
+        height: 100%;
+        width: 150%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 60px;
+        color: #FFFFFF;
+        border-radius: 5px;
+        letter-spacing: 3px;
+    }
+    .jam span {
+        font-weight: bolder;
+        font-size: 60px;
+        color: #FFFFFF;
+    }
+    #btn-data{
         position: absolute;
         width: 280px;
-        height: 120px;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 28px;;
+        height: 165px;
         margin-left: 390px;
-        margin-top: 150px;
+        margin-top: 427px;
+
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 28px;
     } 
     .awesome{
         position: absolute;
         font-size: 70px;
         color: #B8704F;
-        
-
+        left: 1.56%;
+        right: 1.56%;
+        top: 1.56%;
+        bottom: 1.56%;
+        padding-top: 26px;
     }
-    a{
+    .label-btn{
         text-decoration: none;
         position: absolute;
-        width: 121px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        /* identical to box height, or 150% */
+
+        letter-spacing: 0.3px;
+        text-align: center;
+        padding-top: 110px;
+        padding-left: 79px;
+
+        color: #B6724D;
+    }
+    #btn-state{
+        position: absolute;
+        width: 280px;
+        height: 165px;
+        margin-left: 770px;
+        margin-top: 427px;
+
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 28px;
+    }
+    input[value='.$state.']{
+        position: absolute;
+        width: 81px;
         height: 30px;
         font-family: 'Poppins';
         font-style: normal;
@@ -234,38 +251,9 @@ if(isset($btn)) {
 
         letter-spacing: 0.3px;
         text-align: center;
-
-        color: #B6724D;
-    }
-    input{
-        position: absolute;
-        width: 280px;
-        height: 165px;
-        margin-left: 770px;
-        margin-top: 120px;
-
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 28px;
-    }
-    .input-value{
-        
-        position: absolute;
-        width: 81px;
-        height: 30px;
-        left: 862px;
-        top: 835px;
-
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        /* identical to box height, or 150% */
-
-        letter-spacing: 0.3px;
-
+        padding-top: 115px;
+        padding-left: 92px;
         color: #BF6A56;
-
     }
 </style>
 
