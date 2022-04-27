@@ -1,5 +1,5 @@
 <html>
-    <button><a href="index2.php">back</a></button>
+    <button><a href="test.php">back</a></button>
 </html>
 
 <?php
