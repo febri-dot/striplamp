@@ -37,6 +37,7 @@ $state = $btn == "ON" ? "OFF" : "ON";
         <form method="get" id="form">
             <button>
                 <p class="awesome"><i class="fa fa-clock"></i></p>
+                <br>
                 <a href="data.php">Time usage</a>
             </button>
             <?php echo '<input type="submit" name="tombol" id="btn" value="'.$state.'"/>'; ?>
@@ -123,8 +124,8 @@ if(isset($btn)) {
         position: relative;
         width: 607px;
         height: 110px;
-        margin-left: 430px;
-        margin-top: 114px;
+        margin-left: 400px;
+        margin-top: 75px;
 
         font-family: 'Poppins';
         font-style: normal;
@@ -144,13 +145,13 @@ if(isset($btn)) {
         position: relative;
         width: 761px;
         height: 45px;
-        margin-left: 340px;
+        margin-left: 325px;
         margin-top: 24px;
 
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 35px;
+        font-size: 30px;
         line-height: 45px;
         /* identical to box height, or 129% */
         text-align: center;
@@ -171,7 +172,7 @@ if(isset($btn)) {
     justify-content: space-between;
 } */
 .jam{
-    margin-left: 352px;
+    margin-left: 675px;
     margin-top: 157px;
     border: 2px;
     position: absolute;
@@ -206,16 +207,17 @@ if(isset($btn)) {
     button{
         position: absolute;
         width: 280px;
-        height: 165px;
+        height: 120px;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 28px;;
         margin-left: 390px;
-        margin-top: 120px;
+        margin-top: 150px;
     } 
     .awesome{
         position: absolute;
         font-size: 70px;
         color: #B8704F;
+        
 
     }
     a{
