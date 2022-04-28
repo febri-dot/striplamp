@@ -6,7 +6,7 @@ error_reporting(0);  //mematikan error dihalaman
 include 'connect.php';
 
 $btn = $_GET ['tombol'];
-$state = $btn == "ON" ? "OFF" : "ON";
+$state = $btn == "On" ? "Off" : "On";
 
 ?>
 
@@ -39,7 +39,10 @@ $state = $btn == "ON" ? "OFF" : "ON";
                 <p class="awesome"><i class="fa fa-clock"></i></p>
                 <p class="label-btn">Time Usage</p>
             </a>
-            <?php echo '<input type="submit" name="tombol" class="btn" id="btn-state" value="'.$state.'"/>'; ?>
+            <?php echo '
+                <input type="button" name="tombol" class="btn" id="btn-state" value="'.$state.'"/>
+                    
+            '; ?>
         </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -123,8 +126,8 @@ if(isset($btn)) {
         position: relative;
         width: 607px;
         height: 110px;
-        margin-left: 400px;
-        margin-top: 75px;
+        margin-left: 375px;
+        margin-top: 25px;
 
         font-family: 'Poppins';
         font-style: normal;
@@ -144,8 +147,8 @@ if(isset($btn)) {
         position: relative;
         width: 761px;
         height: 45px;
-        margin-left: 325px;
-        margin-top: 24px;
+        margin-left: 300px;
+        margin-top: 15px;
 
         font-family: 'Poppins';
         font-style: normal;
@@ -160,7 +163,7 @@ if(isset($btn)) {
     }
     .jam{
         margin-left: 675px;
-        margin-top: 157px;
+        margin-top: 100px;
         border: 2px;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -188,27 +191,27 @@ if(isset($btn)) {
     .jam span {
         font-weight: bolder;
         font-size: 60px;
-        color: #FFFFFF;
+        color: #7E3906;
     }
     #btn-data{
         position: absolute;
-        width: 280px;
-        height: 165px;
-        margin-left: 390px;
-        margin-top: 427px;
+        width: 200px;
+        height: 100px;
+        margin-left: 400px;
+        margin-top: 225px;
 
         background: rgba(255, 255, 255, 0.8);
         border-radius: 28px;
     } 
     .awesome{
         position: absolute;
-        font-size: 70px;
+        font-size: 30px;
         color: #B8704F;
-        left: 1.56%;
-        right: 1.56%;
-        top: 1.56%;
-        bottom: 1.56%;
-        padding-top: 26px;
+        left: 1.5%;
+        right: 1.5%;
+        top: 1.5%;
+        bottom: 1.5%;
+        padding-top: 20px;
     }
     .label-btn{
         text-decoration: none;
@@ -223,22 +226,35 @@ if(isset($btn)) {
 
         letter-spacing: 0.3px;
         text-align: center;
-        padding-top: 110px;
-        padding-left: 79px;
+        padding-top: 53px;
+        padding-left: 25px;
 
         color: #B6724D;
     }
     #btn-state{
         position: absolute;
-        width: 280px;
-        height: 165px;
-        margin-left: 770px;
-        margin-top: 427px;
-
+        width: 200px;
+        height: 100px;
+        margin-left: 740px;
+        margin-top: 225px;
+        
         background: rgba(255, 255, 255, 0.8);
         border-radius: 28px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        /* identical to box height, or 150% */
+
+        letter-spacing: 0.3px;
+        text-align: center;
+        padding-top: 53px;
+        padding-left: 10px;
+        color: #BF6A56;
     }
-    input[value='.$state.']{
+    /* input[value='.$state.']{
         position: absolute;
         width: 81px;
         height: 30px;
@@ -249,11 +265,19 @@ if(isset($btn)) {
         line-height: 30px;
         /* identical to box height, or 150% */
 
-        letter-spacing: 0.3px;
+        /* letter-spacing: 0.3px;
         text-align: center;
-        padding-top: 115px;
-        padding-left: 92px;
-        color: #BF6A56;
-    }
+        /* padding-top: 50px;
+        padding-left: 50px; */
+        /* color: #BF6A56; */ */
+    } */
+    /* .bulb{
+        position: absolute;
+        font-size: 70px;
+        color: #B8704F;
+        left: 890px;
+        top: 650px;
+    } */
+    
 </style>
 
