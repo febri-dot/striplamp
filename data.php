@@ -9,48 +9,46 @@
 ?>
 
 <html>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 
-<body>
-    
-    <h1>Datalog</h1>
-    <a class="btn" href="test.php" role="button" id="btn-back">
-        <p class="label-back">Back</p>
-    </a>
-    <!-- <button class="btn" id="btn-back">
-        <a href="test.php">Back</a>
-    </button> -->
-    <!-- <input type="text" name="delete" id="del"> -->
-    <form method="GET" action="delete.php">
-        <button class="btn" id="btn-del" name="delete" href='delete.php' >Clear data</button>
-    </form>
-    <table >
-            <th>ID</th>
-            <th>Kondisi</th>
-            <th>Hari</th>
-            <th>Waktu</th>
-            <th>Tanggal</th>
-            <?php
-                $i = 1;
-                while($row=$result->fetch_assoc()){
-                    echo "<tr>
-                        <td>".$i."</td>
-                        <td>".$row['kondisi']."</td>
-                        <td>".$row['hari']."</td>
-                        <td>".$row['waktu']."</td>
-                        <td>".$row['tanggal']."</td>
-                    </tr>";
-                $i++;
-                }
-            ?>
-    </table>
-</body>
+    <body>
+        
+        <h1>Datalog</h1>
+        <a class="btn" href="test.php" role="button" id="btn-back">
+            <p class="label-back">Back</p>
+        </a>
+        <form method="GET" action="delete.php">
+            <a class="btn" id="btn-del" name="delete" href='delete.php' role="button">
+                <p class="label-del">Clear</p>
+            </a>
+        </form>
+        <table >
+                <th>ID</th>
+                <th>Kondisi</th>
+                <th>Hari</th>
+                <th>Waktu</th>
+                <th>Tanggal</th>
+                <?php
+                    $i = 1;
+                    while($row=$result->fetch_assoc()){
+                        echo "<tr>
+                            <td>".$i."</td>
+                            <td>".$row['kondisi']."</td>
+                            <td>".$row['hari']."</td>
+                            <td>".$row['waktu']."</td>
+                            <td>".$row['tanggal']."</td>
+                        </tr>";
+                    $i++;
+                    }
+                ?>
+        </table>
+    </body>
 </html>
 
 <style>
@@ -75,38 +73,6 @@
         font-weight: 500;
         font-size: 100px;
         line-height: 110px;
-    }
-    #btn-back{
-        /* BACK */
-        position: absolute;
-        width: 90px;
-        height: 40px;
-        left: 258px;
-        top: 170px;
-        background: #FFFFFF;
-        color: #7E3906;
-        border-radius: 10px;
-        border : 0px;
-    }
-    .label-back{
-        font-family: 'Poppins';
-        font-style: normal;
-        text-decoration:none;
-        font-weight: 400;
-        font-size: 20px;
-        color: #B6724D;
-    }
-    #btn-del{
-        /* CLEAR DATA */
-        position: absolute;
-        width: 150px;
-        height: 40px;
-        left: 958px;
-        top: 170px;
-        color: #7E3906;
-        background: #FFFFFF;
-        border-radius: 10px;
-        border : 0px;
     }
     table th{
         background: #FFFFFF;
@@ -136,20 +102,44 @@
     tr:nth-child(even) {
         background-color: #E0A470;
     }
-    /* a{
+    #btn-back{
+        /* BACK */
+        position: absolute;
+        width: 90px;
+        height: 40px;
+        left: 258px;
+        top: 170px;
+        background: #FFFFFF;
+        color: #7E3906;
+        border-radius: 10px;
+        border : 0px;
+    }
+    .label-back{
         font-family: 'Poppins';
         font-style: normal;
         text-decoration:none;
         font-weight: 400;
         font-size: 20px;
-        line-height: 30px;
-        identical to box height, or 150% 
-
-        letter-spacing: 0.3px;
-        text-align: center;
-        padding-top: px;
-        padding-left: 79px; 
         color: #B6724D;
-    } */
-
+    }
+    #btn-del{
+        /* CLEAR DATA */
+        position: absolute;
+        width: 90px;
+        height: 40px;
+        left: 1015px;
+        top: 170px;
+        color: #7E3906;
+        background: #FFFFFF;
+        border-radius: 10px;
+        border : 0px;
+    }
+    .label-del{
+        font-family: 'Poppins';
+        font-style: normal;
+        text-decoration:none;
+        font-weight: 400;
+        font-size: 20px;
+        color: #B6724D;
+    }
 </style>

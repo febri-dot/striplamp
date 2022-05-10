@@ -6,7 +6,7 @@ error_reporting(0);  //mematikan error dihalaman
 include 'connect.php';
 
 $btn = $_GET ['tombol'];
-$state = $btn == "On" ? "Off" : "On";
+$state = $btn == "ON" ? "OFF" : "ON";
 
 ?>
 
@@ -40,8 +40,10 @@ $state = $btn == "On" ? "Off" : "On";
                 <p class="label-btn">Time Usage</p>
             </a>
             <?php echo '
-                <input type="button" name="tombol" class="btn" id="btn-state" value="'.$state.'"/>
-                    
+                <input type="submit" name="tombol" class="btn" id="btn-state" value="'.$state.'"/> 
+                <p class="bulb">
+                    <i class="fa fa-lightbulb"></i>
+                </p>
             '; ?>
         </form>
     </body>
@@ -127,7 +129,7 @@ if(isset($btn)) {
         width: 607px;
         height: 110px;
         margin-left: 375px;
-        margin-top: 25px;
+        margin-top: 35px;
 
         font-family: 'Poppins';
         font-style: normal;
@@ -163,7 +165,7 @@ if(isset($btn)) {
     }
     .jam{
         margin-left: 675px;
-        margin-top: 100px;
+        margin-top: 150px;
         border: 2px;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -196,9 +198,9 @@ if(isset($btn)) {
     #btn-data{
         position: absolute;
         width: 200px;
-        height: 100px;
+        height: 120px;
         margin-left: 400px;
-        margin-top: 225px;
+        margin-top: 275px;
 
         background: rgba(255, 255, 255, 0.8);
         border-radius: 28px;
@@ -211,7 +213,7 @@ if(isset($btn)) {
         right: 1.5%;
         top: 1.5%;
         bottom: 1.5%;
-        padding-top: 20px;
+        padding-top: 23px;
     }
     .label-btn{
         text-decoration: none;
@@ -226,7 +228,7 @@ if(isset($btn)) {
 
         letter-spacing: 0.3px;
         text-align: center;
-        padding-top: 53px;
+        padding-top: 60px;
         padding-left: 25px;
 
         color: #B6724D;
@@ -234,10 +236,10 @@ if(isset($btn)) {
     #btn-state{
         position: absolute;
         width: 200px;
-        height: 100px;
+        height: 120px;
+        margin-top: 275px;
         margin-left: 740px;
-        margin-top: 225px;
-        
+
         background: rgba(255, 255, 255, 0.8);
         border-radius: 28px;
 
@@ -254,30 +256,12 @@ if(isset($btn)) {
         padding-left: 10px;
         color: #BF6A56;
     }
-    /* input[value='.$state.']{
+    .bulb{
         position: absolute;
-        width: 81px;
-        height: 30px;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        /* identical to box height, or 150% */
-
-        /* letter-spacing: 0.3px;
-        text-align: center;
-        /* padding-top: 50px;
-        padding-left: 50px; */
-        /* color: #BF6A56; */ */
-    } */
-    /* .bulb{
-        position: absolute;
-        font-size: 70px;
+        font-size: 35px;
         color: #B8704F;
-        left: 890px;
-        top: 650px;
-    } */
-    
+        left: 827px;
+        top: 486px;
+    } 
 </style>
 
