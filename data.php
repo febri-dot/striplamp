@@ -20,7 +20,7 @@
     <body>
         
         <h1>Datalog</h1>
-        <a class="btn" href="index.php" role="button" id="btn-back">
+        <a class="btn" href="home.php" role="button" id="btn-back">
             <p class="label-back">Back</p>
         </a>
         <form method="GET" action="delete.php">

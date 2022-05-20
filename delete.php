@@ -6,7 +6,7 @@ $delete = $_GET['delete'];
 // var_dump($delete);
 // die;
 
-$result = mysqli_query ($conn, "DELETE FROM datalamp");
+$result = mysqli_query ($conn, "TRUNCATE datalamp");
 
 $message = "Success deleted data";
 echo 
